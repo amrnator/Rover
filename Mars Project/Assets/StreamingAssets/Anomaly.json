@@ -1,0 +1,12 @@
+{
+	"dataBase": [ 
+		{
+		"name": "Outcrop",
+		"information": "A pile of rocks"
+		},
+		{
+		"name": "carbonate",
+		"information": "wet rock"
+		}
+	]
+}
