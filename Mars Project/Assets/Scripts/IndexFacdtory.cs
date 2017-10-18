@@ -9,7 +9,7 @@ public class IndexFacdtory : MonoBehaviour {
     //jsondata
     string jsonString;
 
-    void Start() {
+	void Start() {
         //get path to straming assets
         path = Application.streamingAssetsPath + "/Anomaly.json";
         //get data from file
@@ -17,8 +17,7 @@ public class IndexFacdtory : MonoBehaviour {
 
         CodexDataBase database = JsonUtility.FromJson<CodexDataBase>(jsonString);
 
-        print(database.dataBase[1].name);
-
+		GameObject.FindGameObjectWithTag ("Player").GetComponent<Player> ().codexDatabase = database;
     }
 
 }
@@ -31,6 +30,7 @@ public class CodexDataBase
 
 [System.Serializable]
 public class Codex {
+	public int codexID;
     public string name;
     public string information;
 }

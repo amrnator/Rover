@@ -1,10 +1,12 @@
 {
 	"dataBase": [ 
 		{
+		"codexID" : 0,
 		"name": "Outcrop",
 		"information": "A pile of rocks"
 		},
 		{
+		"codexID" : 1,
 		"name": "carbonate",
 		"information": "wet rock"
 		}
