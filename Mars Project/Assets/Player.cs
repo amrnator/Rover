@@ -22,13 +22,18 @@ public class Player : MonoBehaviour {
 		if (Input.GetButtonDown ("Fire1") && inResearch) {
 			print("Beginning Research");
 
-			StartCoroutine ("ResearchAnimation");
-		}
+            showCodex();
+        }
 
 		if (Input.GetButtonDown ("Fire2") && codexOut) {
 			CodexAnimator.SetBool ("isOpen", false);
 		}
-	}
+
+        if (Input.GetButtonDown("Cancel"))
+        {
+            Application.Quit();
+        }
+    }
 
 	public void promptResearch(int codexID){
 		currentCodex = codexID;
