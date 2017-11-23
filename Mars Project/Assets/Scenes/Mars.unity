@@ -119,6 +119,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114042820588018904, guid: 77c1a3a5606583e47849915d61c64081,
+        type: 2}
+      propertyPath: frictionCurve.m_Curve.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4860089485671122, guid: 77c1a3a5606583e47849915d61c64081, type: 2}
       propertyPath: m_LocalPosition.x
       value: 493.02713
@@ -180,6 +185,86 @@ Prefab:
         type: 2}
       propertyPath: sidewayStiffness
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114042820588018904, guid: 77c1a3a5606583e47849915d61c64081,
+        type: 2}
+      propertyPath: frictionCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114042820588018904, guid: 77c1a3a5606583e47849915d61c64081,
+        type: 2}
+      propertyPath: frictionCurve.m_Curve.Array.data[1].time
+      value: 0.30765164
+      objectReference: {fileID: 0}
+    - target: {fileID: 114042820588018904, guid: 77c1a3a5606583e47849915d61c64081,
+        type: 2}
+      propertyPath: frictionCurve.m_Curve.Array.data[1].value
+      value: 0.73998666
+      objectReference: {fileID: 0}
+    - target: {fileID: 114042820588018904, guid: 77c1a3a5606583e47849915d61c64081,
+        type: 2}
+      propertyPath: frictionCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114042820588018904, guid: 77c1a3a5606583e47849915d61c64081,
+        type: 2}
+      propertyPath: frictionCurve.m_Curve.Array.data[0].inSlope
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114042820588018904, guid: 77c1a3a5606583e47849915d61c64081,
+        type: 2}
+      propertyPath: frictionCurve.m_Curve.Array.data[0].outSlope
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114042820588018904, guid: 77c1a3a5606583e47849915d61c64081,
+        type: 2}
+      propertyPath: frictionCurve.m_Curve.Array.data[1].inSlope
+      value: -0.000010838117
+      objectReference: {fileID: 0}
+    - target: {fileID: 114042820588018904, guid: 77c1a3a5606583e47849915d61c64081,
+        type: 2}
+      propertyPath: frictionCurve.m_Curve.Array.data[1].outSlope
+      value: -0.000010838117
+      objectReference: {fileID: 0}
+    - target: {fileID: 114042820588018904, guid: 77c1a3a5606583e47849915d61c64081,
+        type: 2}
+      propertyPath: frictionCurve.m_Curve.Array.data[2].time
+      value: 0.68001014
+      objectReference: {fileID: 0}
+    - target: {fileID: 114042820588018904, guid: 77c1a3a5606583e47849915d61c64081,
+        type: 2}
+      propertyPath: frictionCurve.m_Curve.Array.data[2].value
+      value: 0.49696088
+      objectReference: {fileID: 0}
+    - target: {fileID: 114042820588018904, guid: 77c1a3a5606583e47849915d61c64081,
+        type: 2}
+      propertyPath: frictionCurve.m_Curve.Array.data[2].inSlope
+      value: -0.0014026214
+      objectReference: {fileID: 0}
+    - target: {fileID: 114042820588018904, guid: 77c1a3a5606583e47849915d61c64081,
+        type: 2}
+      propertyPath: frictionCurve.m_Curve.Array.data[2].outSlope
+      value: -0.0014026214
+      objectReference: {fileID: 0}
+    - target: {fileID: 114042820588018904, guid: 77c1a3a5606583e47849915d61c64081,
+        type: 2}
+      propertyPath: frictionCurve.m_Curve.Array.data[3].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114042820588018904, guid: 77c1a3a5606583e47849915d61c64081,
+        type: 2}
+      propertyPath: frictionCurve.m_Curve.Array.data[3].value
+      value: 0.4995896
+      objectReference: {fileID: 0}
+    - target: {fileID: 114042820588018904, guid: 77c1a3a5606583e47849915d61c64081,
+        type: 2}
+      propertyPath: frictionCurve.m_Curve.Array.data[3].inSlope
+      value: 0.018492978
+      objectReference: {fileID: 0}
+    - target: {fileID: 114042820588018904, guid: 77c1a3a5606583e47849915d61c64081,
+        type: 2}
+      propertyPath: frictionCurve.m_Curve.Array.data[3].outSlope
+      value: 0.018492978
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77c1a3a5606583e47849915d61c64081, type: 2}

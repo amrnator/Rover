@@ -8,16 +8,10 @@ public class RoverWheelDrive : MonoBehaviour {
 
     public float maxAngle = 30;
     public float maxTorque = 300;
-    public float forwardStiffness = 3f;
-    public float sidewayStiffness = 3f;
+    public float forwardStiffness = 1f;
+    public float sidewayStiffness = 1f;
 
-    //Extrenum for friction
-    public float extrenumSlip = 4f;
-    public float extrenumForce = 4f;
-
-    //Asymptotes for friction
-    public float asymptoteSlip = 3f; 
-    public float asymptoteForce = 3f; 
+    public AnimationCurve frictionCurve;
 
     public GameObject wheelShape;
 
@@ -25,6 +19,10 @@ public class RoverWheelDrive : MonoBehaviour {
     public void Start()
     {
         wheels = GetComponentsInChildren<WheelCollider>();
+
+        print("Number of keys" + frictionCurve.keys.Length);
+
+        frictionCurve.keys[1].time
 
         for (int i = 0; i < wheels.Length; ++i)
         {
