@@ -8,10 +8,23 @@ public class RoverWheelDrive : MonoBehaviour {
 
     public float maxAngle = 30;
     public float maxTorque = 300;
-    public float forwardStiffness = 1f;
-    public float sidewayStiffness = 1f;
 
-    public AnimationCurve frictionCurve;
+
+
+    [Header("Forward Friction")]
+    public float FextrenumSlip = 0.4f;
+    public float FextrenumValue = 1;
+    public float FasymptoteSlip = 0.8f;
+    public float FasymptoteValue = 0.5f;
+    public float forwardStiffness = 1f;
+
+
+    [Header("Sideways Friction")]
+    public float SextrenumSlip = 0.2f;
+    public float SextrenumValue = 1;
+    public float SasymptoteSlip = 0.5f;
+    public float SasymptoteValue = 0.75f;
+    public float sidewayStiffness = 1f;
 
     public GameObject wheelShape;
 
@@ -20,25 +33,38 @@ public class RoverWheelDrive : MonoBehaviour {
     {
         wheels = GetComponentsInChildren<WheelCollider>();
 
-        print("Number of keys" + frictionCurve.keys.Length);
+        print(wheels.Length);
 
-        frictionCurve.keys[1].time
 
         for (int i = 0; i < wheels.Length; ++i)
         {
             var wheel = wheels[i];
 
-            var wfStiffness = wheel.forwardFriction.stiffness;
+            WheelFrictionCurve wfFriction = wheel.forwardFriction;
 
-            var wsStiffness = wheel.sidewaysFriction.stiffness;
+            WheelFrictionCurve wsFriction = wheel.sidewaysFriction;
 
-            wfStiffness = forwardStiffness;
-            wsStiffness = sidewayStiffness;
+            wfFriction.stiffness = forwardStiffness;
+            wsFriction.stiffness = sidewayStiffness;
+
+            wfFriction.asymptoteSlip = FasymptoteSlip;
+            wfFriction.asymptoteValue = FasymptoteValue;
+            wfFriction.extremumSlip = FextrenumSlip;
+            wfFriction.extremumValue = FextrenumValue;
+
+            wsFriction.asymptoteSlip = SasymptoteSlip;
+            wsFriction.asymptoteValue = SasymptoteValue;
+            wsFriction.extremumSlip = SextrenumSlip;
+            wsFriction.extremumValue = SextrenumValue;
+
+            wheel.forwardFriction = wfFriction;
+            wheel.sidewaysFriction = wsFriction;
+
 
             // create wheel shapes only when needed
             if (wheelShape != null)
             {
-                var ws = GameObject.Instantiate(wheelShape);
+                var ws = Instantiate(wheelShape);
                 ws.transform.parent = wheel.transform;
             }
         }
@@ -58,8 +84,10 @@ public class RoverWheelDrive : MonoBehaviour {
             if (wheel.transform.localPosition.z > 0)
                 wheel.steerAngle = angle;
 
-            if (wheel.transform.localPosition.z <= 0)
-                wheel.motorTorque = torque;
+            //if (wheel.transform.localPosition.z <= 0)
+              //  wheel.motorTorque = torque;
+
+            wheel.motorTorque = torque;
 
             // update visual wheels if any
             if (wheelShape)

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1384057245}
-  m_IndirectSpecularColor: {r: 0.1356505, g: 0.1505835, b: 0.15989417, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -179,12 +179,12 @@ Prefab:
     - target: {fileID: 114042820588018904, guid: 77c1a3a5606583e47849915d61c64081,
         type: 2}
       propertyPath: forwardStiffness
-      value: 0.8
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114042820588018904, guid: 77c1a3a5606583e47849915d61c64081,
         type: 2}
       propertyPath: sidewayStiffness
-      value: 0.2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114042820588018904, guid: 77c1a3a5606583e47849915d61c64081,
         type: 2}
@@ -194,12 +194,12 @@ Prefab:
     - target: {fileID: 114042820588018904, guid: 77c1a3a5606583e47849915d61c64081,
         type: 2}
       propertyPath: frictionCurve.m_Curve.Array.data[1].time
-      value: 0.30765164
+      value: 0.3188821
       objectReference: {fileID: 0}
     - target: {fileID: 114042820588018904, guid: 77c1a3a5606583e47849915d61c64081,
         type: 2}
       propertyPath: frictionCurve.m_Curve.Array.data[1].value
-      value: 0.73998666
+      value: 0.9637873
       objectReference: {fileID: 0}
     - target: {fileID: 114042820588018904, guid: 77c1a3a5606583e47849915d61c64081,
         type: 2}
@@ -229,12 +229,12 @@ Prefab:
     - target: {fileID: 114042820588018904, guid: 77c1a3a5606583e47849915d61c64081,
         type: 2}
       propertyPath: frictionCurve.m_Curve.Array.data[2].time
-      value: 0.68001014
+      value: 0.7436088
       objectReference: {fileID: 0}
     - target: {fileID: 114042820588018904, guid: 77c1a3a5606583e47849915d61c64081,
         type: 2}
       propertyPath: frictionCurve.m_Curve.Array.data[2].value
-      value: 0.49696088
+      value: 0.6461613
       objectReference: {fileID: 0}
     - target: {fileID: 114042820588018904, guid: 77c1a3a5606583e47849915d61c64081,
         type: 2}
@@ -265,6 +265,11 @@ Prefab:
         type: 2}
       propertyPath: frictionCurve.m_Curve.Array.data[3].outSlope
       value: 0.018492978
+      objectReference: {fileID: 0}
+    - target: {fileID: 114042820588018904, guid: 77c1a3a5606583e47849915d61c64081,
+        type: 2}
+      propertyPath: maxTorque
+      value: 700
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77c1a3a5606583e47849915d61c64081, type: 2}
