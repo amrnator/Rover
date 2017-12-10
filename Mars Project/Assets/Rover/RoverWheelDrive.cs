@@ -40,6 +40,8 @@ public class RoverWheelDrive : MonoBehaviour {
         {
             var wheel = wheels[i];
 
+            wheel.ConfigureVehicleSubsteps(5, 12, 15);
+
             WheelFrictionCurve wfFriction = wheel.forwardFriction;
 
             WheelFrictionCurve wsFriction = wheel.sidewaysFriction;
